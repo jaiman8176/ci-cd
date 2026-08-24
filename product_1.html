@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card{
+        transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card-img-top{
+            height:250px;
+            object-fit:contain;
+            background:#fff;
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+    <div class="container-fluid p-0 md-1">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #084b83;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Hingable</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nid">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nid">
+                    <ul class="navbar-nav">
+                        <li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item "><a class="nav-link" href="products.html">Products</a></li>
+                        <li class="nav-item "><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item "><a class="nav-link" href="about.html">about</a></li>
+                    </ul>
+                </div>
+
+                <!-- login and signup button -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle m-1 rounded-circle"
+                                type="button"
+                                data-bs-toggle="dropdown" style="border: none;">
+                            <i class="bi bi-person-circle" style="color: #ff595e;"></i>
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#model_id2">Sign up</a></li>
+                            <li><a class="dropdown-item" href="#"  data-bs-toggle="modal" data-bs-target="#model_id">Login</a></li>
+                        </ul>
+                    </div>
+                    <!-- signup modal -->
+                     <div class="modal " id="model_id2">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content p-3">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title" style="color: #8ac926;"> Sign up </h2>
+                                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="signup-name" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="signup-name" placeholder="Enter your name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="signup-email" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="signup-email" placeholder="Enter your email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="signup-password" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="signup-password" placeholder="Enter your password">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="signup-confirm-password" class="form-label">Confirm Password</label>
+                                                <input type="password" class="form-control" id="signup-confirm-password" placeholder="Confirm your password">
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="form-check mt-3">
+                                                    <input class="form-check-input" type="checkbox" id="terms">
+                                                    <label class="form-check-label" for="terms">
+                                                        I agree to the <a href="#">Terms & Conditions</a>.
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-success" data-bs-dismiss="modal" style="background-color: #8ac926;">submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <!-- login modal -->
+                        <div class="modal" id="model_id">
+                            <div class="modal-dialog modal-dialog-centered ">
+                                <div class="modal-content p-3">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title" style="color: #8ac926;"> login </h2>
+                                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Welcome 🤩😉</h4>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="signup-email" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="signup-email" placeholder="Enter your email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="signup-password" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="signup-password" placeholder="Enter your password">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-success" data-bs-dismiss="modal" style="background-color: #8ac926;">Log in</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-light dropdown-toggle m-1 rounded-circle"
+                                        type="button"
+                                        data-bs-toggle="dropdown"
+                                        style="border: none;">
+                                    <i class="bi bi-search" style="color: #ff595e;"></i>
+                                </button>
+
+                                <ul class="dropdown-menu">
+                                    <li><form><input type="search" class="form-control" id="signup-confirm-password" placeholder="search"></form></li>
+                                </ul>
+                            </div>
+            </div>
+        </nav>
+    </div>
+<!-- Body -->
+    <div class="my-2">
+         <div class="container-fluid">
+            <div class="row rounded-2" style="border: 2px solid #084b83;">
+                <div class="col-6 text-center" >
+                    <h6 class="px-4 pb-0 m-0" style="border-right:2px solid #084b83;"> ⁝ Filter </h6>
+                </div>
+                <div class="col-6 text-center" >
+                    <h6 class="px-4  m-0" style="border-left:2px solid #084b83;">≔ sort by</h6>
+                </div>
+            </div>
+        </div>
+        <div class="my-2">
+            <div class="row g-4">
+                <!-- Product 25 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/25.jpeg" class="card-img-top p-3" alt="1TB NVMe SSD" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">1TB NVMe SSD</h5>
+
+                            <p class="card-text text-muted">
+                                Ultra-fast PCIe Gen4 NVMe SSD delivering blazing-fast boot speeds,
+                                rapid game loading and dependable storage performance.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹7,299</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Product 26 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/26.jpeg" class="card-img-top p-3" alt="850W Gold Modular PSU" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">850W Gold Modular PSU</h5>
+
+                            <p class="card-text text-muted">
+                                80+ Gold certified fully modular power supply with stable output,
+                                silent cooling and premium build quality.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹10,499</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Product 27 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/27.jpeg" class="card-img-top p-3" alt="27-inch Gaming Monitor" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">27-inch Gaming Monitor</h5>
+
+                            <p class="card-text text-muted">
+                                Enjoy ultra-smooth gameplay with a 165Hz refresh rate, vibrant IPS
+                                display and exceptional color accuracy.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹21,999</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Product 28 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/28.jpeg" class="card-img-top p-3" alt="UltraWide Gaming Monitor" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">UltraWide Gaming Monitor</h5>
+
+                            <p class="card-text text-muted">
+                                Premium ultrawide monitor designed for immersive gaming,
+                                multitasking and professional content creation.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹34,999</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Product 29 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/29.jpeg" class="card-img-top p-3" alt="Gaming Mouse Bungee" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming Mouse Bungee</h5>
+
+                            <p class="card-text text-muted">
+                                Keep your mouse cable organized and drag-free for smoother,
+                                more accurate gaming sessions.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹899</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Product 30 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/30.jpeg" class="card-img-top p-3" alt="RGB Headphone Stand" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">RGB Headphone Stand</h5>
+
+                            <p class="card-text text-muted">
+                                Premium RGB headphone stand with sturdy construction,
+                                perfect for keeping your gaming desk organized.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹1,199</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Product 31 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/31.jpeg" class="card-img-top p-3" alt="RGB Gaming Desk Lamp" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">RGB Gaming Desk Lamp</h5>
+
+                            <p class="card-text text-muted">
+                                Modern LED desk lamp featuring adjustable brightness,
+                                vibrant RGB lighting modes and sleek aesthetics.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹2,099</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Product 32 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/32.jpeg" class="card-img-top p-3" alt="Gaming Wi-Fi Router" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming Wi-Fi Router</h5>
+
+                            <p class="card-text text-muted">
+                                High-speed dual-band router engineered for low latency,
+                                stable connections and uninterrupted online gaming.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹6,999</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Product 33 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/33.jpeg" class="card-img-top p-3" alt="USB Gaming Hub" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">USB Gaming Hub</h5>
+
+                            <p class="card-text text-muted">
+                                Expand your connectivity with a high-speed USB hub featuring
+                                multiple ports for gaming accessories and peripherals.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹1,499</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 34 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/34.jpeg" class="card-img-top p-3" alt="Laptop Cooling Pad" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Laptop Cooling Pad</h5>
+
+                            <p class="card-text text-muted">
+                                Keep your laptop cool during long gaming sessions with
+                                quiet high-speed cooling fans and ergonomic design.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹2,299</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 35 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/35.jpeg" class="card-img-top p-3" alt="Gaming Laptop Backpack" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming Laptop Backpack</h5>
+
+                            <p class="card-text text-muted">
+                                Spacious and water-resistant backpack with padded compartments,
+                                ideal for carrying gaming laptops and accessories.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹3,499</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 36 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/36.jpeg" class="card-img-top p-3" alt="Portable SSD 1TB" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Portable SSD 1TB</h5>
+
+                            <p class="card-text text-muted">
+                                Compact high-speed external SSD providing lightning-fast
+                                file transfers for games, projects and backups.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹8,499</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                                    <!-- Product 37 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/37.jpeg" class="card-img-top p-3" alt="Gaming Capture Card" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming Capture Card</h5>
+
+                            <p class="card-text text-muted">
+                                Record and stream gameplay in Full HD with ultra-low latency,
+                                making it perfect for content creators and streamers.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹9,999</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 38 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/38.jpeg" class="card-img-top p-3" alt="RGB Smart Desk Clock" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">RGB Smart Desk Clock</h5>
+
+                            <p class="card-text text-muted">
+                                Stylish digital desk clock with RGB ambient lighting,
+                                temperature display and modern gaming aesthetics.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹1,999</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 39 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/39.jpeg" class="card-img-top p-3" alt="Cable Management Kit" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Cable Management Kit</h5>
+
+                            <p class="card-text text-muted">
+                                Organize your gaming setup with reusable cable ties,
+                                sleeves and clips for a clean, professional look.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹799</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 40 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/40.jpeg" class="card-img-top p-3" alt="Gaming Accessory Bundle" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming Accessory Bundle</h5>
+
+                            <p class="card-text text-muted">
+                                Complete gaming combo featuring premium accessories,
+                                offering excellent value for every gaming enthusiast.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹19,999</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                                <!-- Product 41 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/41.jpeg" class="card-img-top p-3" alt="Gaming Mechanical Keyboard" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming Mechanical Keyboard</h5>
+
+                            <p class="card-text text-muted">
+                                Responsive mechanical keyboard with customizable RGB lighting,
+                                premium switches and anti-ghosting technology.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹4,499</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 42 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/42.jpeg" class="card-img-top p-3" alt="Wireless RGB Gaming Mouse" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Wireless RGB Gaming Mouse</h5>
+
+                            <p class="card-text text-muted">
+                                Precision gaming mouse with adjustable DPI, ergonomic grip
+                                and vibrant RGB illumination.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹2,799</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 43 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/43.jpeg" class="card-img-top p-3" alt="Gaming Headset Pro" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming Headset Pro</h5>
+
+                            <p class="card-text text-muted">
+                                Enjoy immersive surround sound with a noise-isolating microphone,
+                                memory foam ear cushions and lightweight comfort.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹5,299</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 44 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/44.jpeg" class="card-img-top p-3" alt="RGB Gaming Desk" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">RGB Gaming Desk</h5>
+
+                            <p class="card-text text-muted">
+                                Spacious gaming workstation with cable management,
+                                durable steel frame and modern RGB-inspired design.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹13,999</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                                <!-- Product 45 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/45.jpeg" class="card-img-top p-3" alt="Gaming Desk Shelf" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming Desk Shelf</h5>
+
+                            <p class="card-text text-muted">
+                                Premium desktop organizer with storage compartments,
+                                perfect for keeping your gaming accessories within reach.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹2,499</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 46 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/46.jpeg" class="card-img-top p-3" alt="Streaming Ring Light" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Streaming Ring Light</h5>
+
+                            <p class="card-text text-muted">
+                                Professional LED ring light with adjustable brightness
+                                and color temperature for streaming and video creation.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹2,899</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 47 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/47.jpeg" class="card-img-top p-3" alt="Gaming Controller" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Wireless Gaming Controller</h5>
+
+                            <p class="card-text text-muted">
+                                Ergonomic wireless controller with vibration feedback,
+                                precision triggers and long-lasting rechargeable battery.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹4,799</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 48 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 border-0 shadow">
+                        <img src="imgs/renamed_images_1_to_95/48.jpeg" class="card-img-top p-3" alt="Gaming Combo Pack" style="height:250px; object-fit:contain;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming Combo Pack</h5>
+
+                            <p class="card-text text-muted">
+                                Complete gaming accessory bundle including keyboard,
+                                mouse, headset and mouse pad at an unbeatable value.
+                            </p>
+
+                            <h4 style="color:#FF595E;">₹8,999</h4>
+
+                            <button class="btn w-100 text-white" style="background:#084B83;">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="pagination justify-content-center">
+
+                <li class="page-item">
+                    <a class="page-link " href="products.html">1</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link disabled" href="product_1.html">2</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="product_2.html">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="product_3.html">4</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+<!-- Footer -->
+ <div class="container-fluid p-0 mt-1">
+    <footer class=" text-white text-center py-3" style="background-color: #6D1A36;">
+        <div class="row">
+            <div class="col-2" style="text-align: left;"> 
+                <h2 class="mb-3">Hingable</h2>
+                <p class="text-white small">Hingable is a company that specializes in providing high-quality products and services to meet the needs of our customers.</p>
+            </div>
+            <div class="col-md-2 " style="text-align: left;">
+                <h5 style="color: #8ac926;">Quick Links</h5>
+                <ul class="list-unstyled " >
+                    <li><a href="index.html" class="text-white text-decoration-none link-white">Home</a></li>
+                    <li><a href="products.html" class="text-white text-decoration-none link-white">Products</a></li>
+                    <li><a href="services.html" class="text-white text-decoration-none link-white">Services</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2" style="text-align: left;">
+                <h5 style="color: #8ac926;">Our services</h5>
+                <ul class="list-unstyled " >
+                    <li>laptop repair</li>
+                    <li>Virus removal</li>
+                    <li>Custom pc building</li>
+                </ul></div>
+            <div class="col-md-2" style="text-align: left;">
+                <h5 style="color: #8ac926;">Contact</h5>
+                <ul class="list-unstyled " >
+                    <li><a href="https://www.google.com/maps/place/Miraj+Cine+Pride/@23.0528024,72.643643,17.46z/data=!4m6!3m5!1s0x395e86c6b65ceb81:0x748fc19934eadf98!8m2!3d23.0536816!4d72.6433571!16s%2Fg%2F1th59zys?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D" class="text-white text-decoration-none link-white">Hingable, Narol - Naroda Rd, Krishna Nagar, Ahmedabad, Gujarat 382345</a></li>
+                    <li>📞 +41 55225563455</li>
+                    <li><a href="services.html" class="text-white text-decoration-none link-white">📩 hingable@email.com</a></li>
+                </ul></div>
+            <div class="col-md-2" style="text-align: left;">
+                <h5 style="color: #8ac926;">Newsletter</h5>
+                <ul class="list-unstyled " >
+                    <li><p>Subcribe to get update and news.</p></li>
+                </ul>
+                            <div class="input-group" style="max-width: 350px;">
+                <input type="email"
+                    class="form-control"
+                    placeholder="Your email">
+
+                <button class="btn btn-danger" type="submit" style="background-color:#ff595e;">
+                    ➡️
+                </button>
+            </div>
+            </div>
+            <div class="col-md-2" style="text-align: left;">
+
+            </div>
+        </div>  
+        <h5 class="mt-2">-----------------------------------------------------------------------------------------------------</h5>
+        <p class="mt-3">&copy; 2026 Hingable. All rights reserved.</p>
+        
+    </footer>
+</div>
+</body>
+<script src="bootstrap-5.3.8-dist\js\bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>

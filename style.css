@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+body{
+    margin-left: 0;
+    margin-right: 0%;
+}
+/* .carousel-control-next{
+    right: -60px;
+}
+
+.carousel-control-prev{
+    left: -60px;
+} */
+/* .carousel-control-next-icon,
+.carousel-control-prev-icon{
+    background-color:#ff595e;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+} */
+ .carousel-control-next,
+.carousel-control-prev{
+    width: auto;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon{
+    width: 45px;
+    height: 45px;
+    padding: 20px;
+}
+.something{
+    background-color: #084b83;
+    height : 500px;
+    margin-bottom: 5rem;
+}
+#img-1,#img-2,#img-3,#img-4{
+    height: 55px;
+    width: 55px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+#img{
+    height: 155px;
+    width: 155px;
+    
+    
+}
+#img-1{
+    background-color: #084b83;
+}
+#img-2{
+    background-color: #ff595e;
+}
+#img-3{
+    background-color: #8ac926;
+}
+#img-4{
+    background-color: #6D1A36;
+}
+#arr{
+    width: 45px;
+    height: 45px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#first{
+    /* height:150px;
+    width:200px; */
+    background-image: url(imgs/valo.png);
+    background-size: auto;
+    object-fit: fill;
+}
+.product-video{
+    position:absolute;
+    bottom:125px;
+    width:420px;
+    border-radius:15px;
+    z-index:2;
+    border: none;
+}
+#c-img{
+    width: 100px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+}

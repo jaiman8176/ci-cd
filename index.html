@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="g-5">
+<!-- Header -->
+    <div class="container-fluid p-0 md-1">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #084b83;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Hingable</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nid">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nid">
+                    <ul class="navbar-nav">
+                        <li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item "><a class="nav-link" href="products.html">Products</a></li>
+                        <li class="nav-item "><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item "><a class="nav-link" href="about.html">About</a></li>
+                    </ul>
+                </div>
+
+                <!-- login and signup button -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle m-1 rounded-circle"
+                                type="button"
+                                data-bs-toggle="dropdown" style="border: none;">
+                            <i class="bi bi-person-circle" style="color: #ff595e;"></i>
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#model_id2">Sign up</a></li>
+                            <li><a class="dropdown-item" href="#"  data-bs-toggle="modal" data-bs-target="#model_id">Login</a></li>
+                        </ul>
+                    </div>
+                    <!-- signup modal -->
+                    <div class="modal " id="model_id2">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content p-3">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title" style="color: #8ac926;"> Sign up </h2>
+                                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="signup-name" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="signup-name" placeholder="Enter your name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="signup-email" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="signup-email" placeholder="Enter your email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="signup-password" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="signup-password" placeholder="Enter your password">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="signup-confirm-password" class="form-label">Confirm Password</label>
+                                                <input type="password" class="form-control" id="signup-confirm-password" placeholder="Confirm your password">
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="form-check mt-3">
+                                                    <input class="form-check-input" type="checkbox" id="terms">
+                                                    <label class="form-check-label" for="terms">
+                                                        I agree to the <a href="#">Terms & Conditions</a>.
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-success" data-bs-dismiss="modal" style="background-color: #8ac926;">submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <!-- login modal -->
+                        <div class="modal" id="model_id">
+                            <div class="modal-dialog modal-dialog-centered ">
+                                <div class="modal-content p-3">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title" style="color: #8ac926;"> login </h2>
+                                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Welcome 🤩😉</h4>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="signup-email" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="signup-email" placeholder="Enter your email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="signup-password" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="signup-password" placeholder="Enter your password">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-success" data-bs-dismiss="modal" style="background-color: #8ac926;">Log in</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-light dropdown-toggle m-1 rounded-circle"
+                                        type="button"
+                                        data-bs-toggle="dropdown"
+                                        style="border: none;">
+                                    <i class="bi bi-search" style="color: #ff595e;"></i>
+                                </button>
+
+                                <ul class="dropdown-menu">
+                                    <li><form><input type="search" class="form-control" id="signup-confirm-password" placeholder="search"></form></li>
+                                </ul>
+                            </div>
+            </div>
+        </nav>
+        
+    </div>
+<!-- Body -->
+    <div class="container-fluid justify-content-center p-0">
+        <!-- part-1 -->
+        <div class="something">
+                    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators -->
+                        <div class="carousel-indicators ">
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                        </div>
+
+            <!-- Slides -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="rounded-2 shadow p-3 bg-transparent" style="height:550px; width: 1300px;margin-left:auto;margin-right:auto; ">
+                                        <div class="row">
+                                            <div class="col-6" style="border-right: 1px solid black;">
+                                                <img src="imgs/img1.jpg" class="img-fluid rounded-2 w-100" style="height:500px; object-fit:cover;">
+                                            </div>
+                                            <div class="col-6">
+                                                <h2>Custom setup</h2>
+                                                <p>Build the gaming station you've always imagined. Our custom gaming setup service lets you personalize every detail, from the desk to the smallest accessories, creating a space that matches your style and gaming needs.<br>
+
+                                                Whether you're a casual gamer, competitive esports player, streamer, or content creator, we help design a setup that is both visually stunning and highly functional.</p>
+                                                <ul>
+                                                    <li>Gaming Desk (size, shape, color, and material)</li>
+                                                    <li>💺 Ergonomic Gaming Chair</li>
+                                                    <li>💻 PC Components (CPU, GPU, RAM, Storage, Cooling)</li>
+                                                    <li>🖥️ Single, Dual, or Triple Monitor Setup</li>
+                                                    <li>⌨️ Mechanical Keyboard</li>
+                                                    <li>🖱️ Gaming Mouse</li>
+                                                </ul>
+                                                <button class="btn btn-outline-success ms-3" >Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                 <div class=" rounded-2 shadow p-3 bg-transparent" style="height:550px;width: 1300px;margin-left:auto;margin-right:auto; ">
+                                        <div class="row">
+                                            <div class="col-6" style="border-right: 1px solid black;">
+                                               <img src="imgs/img2.png" class="img-fluid rounded-2 w-100" style="height:500px; object-fit:cover;">
+                                            </div>
+                                            <div class="col-6">
+                                                <h2>The "Minimalist Productivity / WFH" Setup</h2>
+                                                <p>Create a workspace tailored for deep focus and ultimate efficiency. Our minimalist productivity setup service lets you optimize your daily work environment, focusing on clean lines, smart organization, and premium ergonomic health to keep you at your best.<br>
+
+                                                Whether you're a software engineer, UI/UX designer, remote executive, or digital professional, we help design a distraction-free workspace that eliminates clutter, maximizes your comfort, and protects your posture.</p>
+                                                <ul>
+                                                    <li>🪵 Active Ergonomics Core</li>
+                                                    <li>🪑 Premium Ergonomic Seating </li>
+                                                    <li>🔌 Single-Cable Docking</li>
+                                                    <li>⌨️ RSI-Prevention Peripherals</li>
+                                                    <li>💡 Glare-Free Desk Lighting</li>
+                                                    <li>🌱 Biophilic Design</li>                        
+                                                </ul>
+                                                <button class="btn btn-outline-success ms-3" >Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                 <div class=" rounded-2 shadow p-3 bg-transparent" style="height:550px;width:1300px ;margin-left:auto;margin-right:auto;">
+                                        <div class="row">
+                                            <div class="col-6" style="border-right: 1px solid black;">
+                                               <img src="imgs/img3.png" class="img-fluid rounded-2 w-100" style="height:500px; object-fit:cover;">
+                                            </div>
+                                            <div class="col-6">
+                                                <h2>The "Pro Creator & Streamer" Setup</h2>
+                                                <p>Design the ultimate broadcast studio right from your home. Our professional creator setup service gives you complete control over your production environment, from studio-grade acoustics to high-end audio and video gear, creating a space that captivates your audience.<br>
+
+                                                Whether you're a full-time Twitch streamer, YouTuber, podcaster, or professional video editor, we help design a studio layout that delivers pristine broadcast quality while keeping your workflow seamless and efficient.</p>
+                                                <ul>
+                                                    <li>🎙️ Broadcast Audio Core</li>
+                                                    <li>🎥 Cinematic Camera Rig</li>
+                                                    <li>💡 Studio Key Lighting</li>
+                                                    <li>🖥️ Multi-Window Display Layout</li>
+                                                    <li>🎛️ Production Control Hub</li>
+                                                    <li>🟩 Acoustic Environment</li>
+                                                </ul>
+                                                <button class="btn btn-outline-success ms-3" >Buy now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+            <!-- Previous Button -->
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#demo" data-bs-slide="prev" >
+                            <span class="carousel-control-prev-icon  "></span>
+                        </button>
+
+                    <!-- Next Button -->
+                        <button class="carousel-control-next " type="button"
+                            data-bs-target="#demo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon "></span>
+                        </button>
+
+                    </div>
+                
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show" >
+            Please Login to Our site to well updated
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        <!-- part-2 -->
+        <div class="row  my-4">
+            <div class="col-3 d-flex" style="border-right:2px solid #fee4cc;">
+                <img src="imgs/png_1.png" class="rounded-circle" id="img-1">
+                <div>
+                    <h3 class="d-block">100% genuine product</h3>
+                    <p class="d-block"> only original & trusted brands</p>
+                </div>
+            </div>
+            <div class="col-3 d-flex" style="border-right:2px solid #fee4cc;">
+                <img src="imgs/png_2.png" class="rounded-circle" id="img-2">
+                <div>
+                    <h3 class="d-block">Expert Technicians</h3>
+                    <p class="d-block">10+ year of experience</p>
+                </div>
+            </div>
+            <div class="col-3 d-flex" style="border-right:2px solid #fee4cc;">
+                <img src="imgs/png_3.png" class="rounded-circle" id="img-3">
+                <div>
+                    <h3 class="d-block">1 year warranty</h3>
+                    <p class="d-block">on all custom PCs</p>
+                </div>
+            </div>
+            <div class="col-3 d-flex">
+                <img src="imgs/png_4.png" class="rounded-circle" id="img-4">
+                <div>
+                    <h3 class="d-block">24/7 support</h3>
+                    <p class="d-block"> We're always here to help</p>
+                </div>
+            </div>
+        </div>
+        <!-- part-3 -->
+        <div class="my-4 mx-0">
+            <div class="container-fluid justify-content-center px-5 rounded-2" style="background-color: #fee4ccc1;">
+                <div class="row rounded-5" >
+                    <h3 class="my-4" style="text-align: center;color:#ff595e;">----<span style="color: #084b83;">BUILD YOUR DREAM SETUP</span>----</h3>
+                    <div class="col-12 d-flex ">
+                        <div class="card p-4  bg-transparent" style="border: none; text-align: center;">
+                            <div class="card-header" style="border: none;"><h6>1️⃣</h6></div>
+                            <div class="card-body ">
+                                <img src="imgs/mess.png" class="card-img-top" style="width: 100%;" id="img">
+                                <h5 class="card-title">CONSULT</h5>
+                                <p class="card-text">Tell us your needs<br> and budget</p>                            
+                            </div>
+                        </div>
+                        <img src="imgs/arrow.png" id="arr">
+                        <div class="card p-4 bg-transparent" style="border: none;text-align: center;">
+                            <div class="card-header" style="border: none;">2️⃣</div>
+                            <div class="card-body ">
+                                <img src="imgs/design.png" style="width: 100%;" id="img">
+                                <h5 class="card-title">DESIGN </h5>
+                                <p class="card-text">We pan the perfect<br> setup for you</p>  
+                            </div>
+                        </div>
+                        <img src="imgs/arrow.png" id="arr">
+                        <div class="card p-4 bg-transparent" style="border: none;text-align: center;">
+                            <div class="card-header" style="border: none;">3️⃣</div>
+                            <div class="card-body ">
+                                <img src="imgs/build.png" style="width: 100%;" id="img">
+                                <h5 class="card-title"> BUILD</h5>
+                                <p class="card-text">Expertly built with<br> precision & care</p>    
+                            </div>
+                        </div>
+                        <img src="imgs/arrow.png" id="arr">
+                        <div class="card p-4 bg-transparent" style="border: none;text-align: center;">
+                            <div class="card-header" style="border: none;">4️⃣</div>
+                            <div class="card-body ">
+                                <img src="imgs/test.png" style="width: 100%; " id="img">
+                                <h5 class="card-title">TEST </h5>
+                                <p class="card-text">Rigorous testing for <br>maximum performance</p>   
+                            </div>
+                        </div>
+                        <img src="imgs/arrow.png" id="arr">
+                        <div class="card p-4 bg-transparent" style="border: none;text-align: center;">
+                            <div class="card-header" style="border: none;">5️⃣</div>
+                            <div class="card-body ">
+                                <img src="imgs/del.png" style="width: 100%;" id="img">
+                                <h5 class="card-title">DELIVER </h5>
+                                <p class="card-text"> Safe delivery & setup<br> at your place</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- part-4 -->
+        <div class="my-4 ">
+            <div class="container-fluid justify-content-center px-5 rounded-2">
+            <div class="row d-flex">
+                <h3  class="" style="text-align: center;color:#ff595e;">----<span style="color: #084b83;">SETUP TRANFORMATION</span>----</h3>
+                <div class="col-5 justify-content-center d-flex">
+                    <img src="imgs/before.png" class="w-100 object-fit-fill rounded-2" style="height: 350px;">
+                    <h2 class="ms-2 text-lg-center" id="arr"><span style="color: #ff595e;"><b>→</b></span></h2>
+                </div>
+                <div class="col-5 justify-content-center d-flex">
+                    <img src="imgs/after.png" class="w-100 object-fit-fill rounded-2 " style="height: 350px;">
+                </div>
+                <div class="col-2">
+                    <h4 class="mb-4" style="color: #084b83;">Your Dream Setup <br> Is Just an <span style="color: #fd474d;">Upgrade</span> Away!</h4>
+                    <p class="mt-3">✏️ Custom Design</p>
+                    <p>🏎️ Better Performance</p>
+                    <p>📦 Clean & Organized</p>
+                    <p>⭐ Aesthetic Environment</p>
+                    <button class="btn btn-danger px-4" style="background-color: #ff595e;">Start your tranformation →</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- part-5 -->
+        <div class="my-2">
+            <div class="container-fluid justify-content-center px-5 rounded-2" style="background-color: #fee4ccc1;">
+            <div class="row rounded-5" style="height: 450px;">
+                <h3  class="" style="text-align: center;color:#ff595e;">----<span style="color: #084b83;">RATINGS</span>----</h3>
+                <div class="col-12">
+                    <div id="demo1" class="carousel slide" data-bs-ride="carousel">
+                        <!-- indicators -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#demo1" data-bs-slide-to="0" class="active"></button> 
+                            <button type="button" data-bs-target="#demo1" data-bs-slide-to="1"></button> 
+                            <button type="button" data-bs-target="#demo1" data-bs-slide-to="2"></button> 
+                            <button type="button" data-bs-target="#demo1" data-bs-slide-to="3"></button> 
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" >
+                                <div class="container">
+                                    <div class="row">
+                                       <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Ava Thompson.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Ava Thompson</h5>
+                                                    <p class="text-muted">I was impressed by the quality of the gaming room setup. Everything from the monitor placement to the lighting was professionally done.</p> 
+                                                    <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+
+                                                        <span class="text-dark ms-2">5/5</span>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div> 
+                                        <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Benjamin Lewis.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Lucas Walker</h5>
+                                                    <p class="text-muted">Great prices and quality products. The PC arrived well-packaged and ready to use. I would definitely shop here again.</p> 
+                                                    <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star"></i>
+
+                                                        <span class="text-dark ms-2">4/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                           <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Charlotte Young.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Charlotte Young</h5>
+                                                    <p class="text-muted">I was impressed by the quality of the gaming room setup. Everything from the monitor placement to the lighting was professionally done.</p> 
+                                                    <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star"></i>
+
+                                                        <span class="text-dark ms-2">4/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Daniel Brooks.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Daniel Brooks</h5>
+                                                    <p class="text-muted">Fantastic experience from start to finish. The custom gaming computer performs beyond my expectations, and the support team was incredibly helpful throughout the process.</p> 
+                                                    <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star"></i>
+
+                                                        <span class="text-dark ms-2">4/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Ethan Carter.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Ethan Carter</h5>
+                                                    <p class="text-muted">I ordered a custom gaming PC and it exceeded my expectations. The cable management is clean, performance is outstanding, and every game runs smoothly. Highly recommended!</p> 
+                                                    <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+
+                                                        <span class="text-dark ms-2">5/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Isabella Harris.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Isabella Harris</h5>
+                                                    <p class="text-muted">Their customer service is exceptional. They answered all my questions and made sure I was happy with my gaming laptop purchase.</p> 
+                                                    <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+
+                                                        <span class="text-dark ms-2">5/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Liam Anderson.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Liam Anderson</h5>
+                                                    <p class="text-muted">I bought a gaming laptop from them, and they helped me choose the perfect model for my budget. Great customer support and fast delivery.</p> 
+                                                    <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+
+                                                        <span class="text-dark ms-2">5/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Mason Clark.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Mason Clark</h5>
+                                                    <p class="text-muted">They recommended the perfect gaming PC for streaming and competitive gaming. Performance is flawless, and temperatures stay low even during long sessions.</p> 
+                                                   <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+
+                                                        <span class="text-dark ms-2">5/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Noah Wilson.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Noah Wilson</h5>
+                                                    <p class="text-muted">The setup looks fantastic and performs really well. Shipping took a little longer than expected, but the final product made up for it.</p> 
+                                                    <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star"></i>
+
+                                                        <span class="text-dark ms-2">4/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Olivia Bennett.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Olivia Bennett</h5>
+                                                    <p class="text-muted">The team built my dream gaming computer exactly how I wanted it. Excellent communication throughout the process and amazing attention to detail.</p> 
+                                                    <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+
+                                                        <span class="text-dark ms-2">5/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Sophia Miller.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Sophia Miller</h5>
+                                                    <p class="text-muted">Their room setup service completely transformed my gaming space. The RGB lighting and desk arrangement look amazing. Worth every penny.</p> 
+                                                    <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+
+                                                        <span class="text-dark ms-2">5/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="card shadow border-0 text-center p-4 ">
+                                                <div class="card-body">
+                                                    <img src="faces/Ava Thompson.jpeg" class="rounded-circle object-fit-fill mx-auto mb-3" style="width: 90px;height: 90px">
+                                                    <h5 class="card-title">Ava Thompson</h5>
+                                                    <p class="text-muted">I was impressed by the quality of the gaming room setup. Everything from the monitor placement to the lighting was professionally done.</p> 
+                                                   <div class="text-warning fs-5">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+
+                                                        <span class="text-dark ms-2">5/5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev rounded-circle" type="button" data-bs-target="#demo1" data-bs-slide="prev" >
+                        <span class="carousel-control-prev-icon  "></span>
+                        </button>
+                        <button class="carousel-control-next " type="button" data-bs-target="#demo1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon "></span>
+                        </button>
+                       <div class="container mt-3">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated p-2" style="width:96%;background-color: #ff595e;">
+                                    Constomer satisfaction 96%
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+           </div>
+        </div>
+        <!-- part-6 -->
+        <div class="my-2">
+            <div class="container-fluid justify-content-center px-5 rounded-2">
+                <div class="row">
+                    <div class="col-6 gap-5" style="text-align: left;">
+                        <h2  class="my-3" style="text-align: center;color:#ff595e;">WHY <span style="color: #084b83;">HINGABLE ?</span></h2>
+                        <div class="d-flex mb-4">
+                            <div>
+                                <img src="imgs/icon1.png">
+                            </div>
+                            <div class="ms-2"><h4 class="m-0 ">Expertise in Custom PCs</h4><p class="m-0">Gaming, Editing & Workstation Builds</p></div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div>
+                                <img src="imgs/icon2.png">
+                            </div>
+                            <div class="ms-2"><h4 class="m-0 ">Passion-Driven Builds</h4><p class="m-0">We craft each PC with care</p></div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div>
+                                <img src="imgs/icon3.png">
+                            </div>
+                            <div class="ms-2"><h4 class="m-0 ">Your Dream, Our Mission</h4><p class="m-0">Get a PC tailored to your needs</p></div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div>
+                                <img src="imgs/icon4.png">
+                            </div>
+                            <div class="ms-2"><h4 class="m-0 ">Trusted Online PC Builders</h4><p class="m-0">Reliable service, best prices</p></div>
+                        </div>
+                        <div class="d-flex ">
+                            <div>
+                                <img src="imgs/icon5.png">
+                            </div>
+                            <div class="ms-2"><h4 class="m-0 ">Seamless Shopping</h4><p class="m-0">Build & buy your perfect PC online</p></div>
+                        </div>
+                    </div>
+                    <div class="col-6 rounded-3 justify-content-center">
+                        <div class="my-3">
+                            <video controls poster="images/poster.jpg" width="100%" height="100%" autoplay muted class="rounded-3">
+                                <source src="imgs/vidssave.com How To Build A Gaming PC in 2024 - Step by Step 1080P.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- part-7 -->
+        <div class="my-2">
+            <div class="container-fluid justify-content-center px-5 rounded-2">
+                <!-- <section class="container py-5"> -->
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-10 w-100">
+
+                            <div class="p-5 rounded-5 shadow-lg "
+                                style="background: linear-gradient(135deg,#101820,#1d3557); color:white;">
+
+                                <h1 class="fw-bold display-5 text-center">
+                                    Level Up Your Gaming Experience
+                                </h1>
+
+                                <p class="text-center fs-5 mt-3">
+                                    Stop settling for low FPS and endless loading screens.
+                                    Experience ultra graphics, lightning-fast performance, and smooth gameplay
+                                    with a custom-built Gaming PC designed for champions.
+                                </p>
+
+                                <div class="text-center mt-4">
+                                    <a href="#" class="btn btn-warning btn-lg px-5 fw-bold rounded-pill">
+                                        Build Your Dream PC
+                                    </a>
+                                </div>
+
+                                <hr class="my-5 border-light">
+
+                                <h2 class="text-center fw-bold mb-4">
+                                    Why Choose Our Gaming PCs?
+                                </h2>
+
+                                <div class="row g-4">
+
+                                    <div class="col-md-6">
+                                        <div class="p-4 rounded-4 h-100"
+                                            style="background:#ffffff10;">
+                                            <h4>🎮 High-End Graphics Card</h4>
+                                            <p>
+                                                NVIDIA RTX or AMD Radeon GPUs deliver ray tracing,
+                                                ultra graphics, AI-powered upscaling, and high FPS
+                                                for a smooth gaming experience.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="p-4 rounded-4 h-100"
+                                            style="background:#ffffff10;">
+                                            <h4>⚡ Powerful Processor</h4>
+                                            <p>
+                                                Intel Core i7/i9 or AMD Ryzen 7/9 processors provide
+                                                incredible gaming performance, multitasking,
+                                                streaming, and content creation without lag.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="p-4 rounded-4 h-100"
+                                            style="background:#ffffff10;">
+                                            <h4>🚀 NVMe SSD Storage</h4>
+                                            <p>
+                                                Ultra-fast NVMe SSDs dramatically reduce loading times,
+                                                speed up Windows boot, and launch games in seconds.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="p-4 rounded-4 h-100"
+                                            style="background:#ffffff10;">
+                                            <h4>🧠 High-Speed RAM</h4>
+                                            <p>
+                                                16GB to 64GB DDR5 RAM ensures seamless gameplay,
+                                                faster multitasking, and smooth performance even with
+                                                demanding applications.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="p-4 rounded-4 h-100"
+                                            style="background:#ffffff10;">
+                                            <h4>❄ Advanced Cooling</h4>
+                                            <p>
+                                                Premium air or liquid cooling keeps temperatures low,
+                                                allowing your CPU and GPU to perform at their best
+                                                during long gaming sessions.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="p-4 rounded-4 h-100"
+                                            style="background:#ffffff10;">
+                                            <h4>🔋 Reliable Power Supply</h4>
+                                            <p>
+                                                80+ Gold certified power supplies deliver clean,
+                                                stable power for maximum efficiency and long-term
+                                                reliability.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <hr class="my-5 border-light">
+
+                                <div class="text-center">
+
+                                    <h2 class="fw-bold">
+                                        Built for Every Gamer
+                                    </h2>
+
+                                    <p class="fs-5 mt-3">
+                                        Whether you're playing Valorant at 400+ FPS, exploring GTA VI
+                                        in stunning 4K, streaming on Twitch, or editing 4K videos,
+                                        our Gaming PCs are engineered to deliver unmatched speed,
+                                        stability, and future-ready performance.
+                                    </p>
+
+                                    <a href="#" class="btn btn-danger btn-lg px-5 rounded-pill fw-bold mt-3">
+                                        Shop Now
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                <!-- </section> -->
+            </div>
+        </div>
+<!-- Footer -->
+<div class="container-fluid p-0 mt-1">
+    <footer class=" text-white text-center py-3" style="background-color: #6D1A36;">
+        <div class="container-fluid justify-content-center px-5 rounded-2" >
+        <div class="row">
+            <div class="col-2" style="text-align: left;"> 
+                <h2 class="mb-3">Hingable</h2>
+                <p class="text-white small">Hingable is a company that specializes in providing high-quality products and services to meet the needs of our customers.</p>
+            </div>
+            <div class="col-md-2 " style="text-align: left;">
+                <h5 style="color: #8ac926;">Quick Links</h5>
+                <ul class="list-unstyled " >
+                    <li><a href="index.html" class="text-white text-decoration-none link-white">Home</a></li>
+                    <li><a href="products.html" class="text-white text-decoration-none link-white">Products</a></li>
+                    <li><a href="services.html" class="text-white text-decoration-none link-white">Services</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2" style="text-align: left;">
+                <h5 style="color: #8ac926;">Our services</h5>
+                <ul class="list-unstyled " >
+                    <li>laptop repair</li>
+                    <li>Virus removal</li>
+                    <li>Custom pc building</li>
+                </ul></div>
+            <div class="col-md-2" style="text-align: left;">
+                <h5 style="color: #8ac926;">Contact</h5>
+                <ul class="list-unstyled " >
+                    <li><a href="https://www.google.com/maps/place/Miraj+Cine+Pride/@23.0528024,72.643643,17.46z/data=!4m6!3m5!1s0x395e86c6b65ceb81:0x748fc19934eadf98!8m2!3d23.0536816!4d72.6433571!16s%2Fg%2F1th59zys?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D" class="text-white text-decoration-none link-white">Hingable, Narol - Naroda Rd, Krishna Nagar, Ahmedabad, Gujarat 382345</a></li>
+                    <li>📞 +41 55225563455</li>
+                    <li><a href="services.html" class="text-white text-decoration-none link-white">📩 hingable@email.com</a></li>
+                </ul></div>
+            <div class="col-md-2" style="text-align: left;">
+                <h5 style="color: #8ac926;">Newsletter</h5>
+                <ul class="list-unstyled " >
+                    <li><p>Subcribe to get update and news.</p></li>
+                </ul>
+                            <div class="input-group" style="max-width: 350px;">
+                <input type="email"
+                    class="form-control"
+                    placeholder="Your email">
+
+                <button class="btn btn-danger" type="submit" style="background-color:#ff595e;">
+                    ➡️
+                </button>
+            </div>
+            </div>
+        </div>  
+        <h5 class="mt-2">-----------------------------------------------------------------------------------------------------</h5>
+        <p class="mt-3">&copy; 2026 Hingable. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="bootstrap-5.3.8-dist\js\bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>
