@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webi4
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webi4
+  template:
+    metadata:
+      labels:
+        app: webi4
+    spec:         
+      containers:
+        - name: webi4
+          image: jaiman8176/my-website:latest
+          ports:
+            - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: webi4
+spec:
+  selector:
+    app: webi4
+  ports:
+  - port: 80
+    targetPort: 80
+  type: LoadBalancer
