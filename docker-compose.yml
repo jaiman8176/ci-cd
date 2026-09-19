@@ -1,0 +1,7 @@
+services:
+  web:
+    image: my-website:latest
+    container_name: my-website
+    ports:
+      - "8080:80"
+    restart: unless-stopped
